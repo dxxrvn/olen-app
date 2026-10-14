@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Олень — тайм-менеджмент</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="home">
+    <header class="header">
+      <nav class="nav container">
+        <a href="#/home" class="logo">
+          <img src="media/logophoto.png" alt="" onerror="this.remove()" />
+          <span class="logo-text">Олень&nbsp;Бананыч</span>
+        </a>
+        <div class="nav-buttons">
+          <a href="#/home" data-nav="home">Главная</a>
+          <a href="#/focus" data-nav="focus">Тайм-менеджмент</a>
+          <a href="#/tasks" data-nav="tasks">Задачи</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ================= ГЛАВНАЯ ================= -->
+    <main id="view-home" class="view">
+      <section class="hero">
+        <div class="hero-media">
+          <video
+            src="media/hero.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            onerror="this.remove()"
+          ></video>
+          <div class="hero-shade"></div>
+        </div>
+        <div class="hero-content container">
+          <p class="eyebrow light rise"><span></span>Олень · тайм-менеджмент</p>
+          <h1 class="rise d1">
+            Время работает,<br />когда ты <em>в ресурсе</em>
+          </h1>
+          <p class="lead rise d2">
+            Помогаем школьникам и студентам организовывать учёбу без стресса:
+            фокус-сессии под lo-fi, план на день и забота о ментальном здоровье.
+          </p>
+          <div class="hero-actions rise d3">
+            <a class="btn btn-primary btn-pulse" href="#/focus"
+              >Начать фокус-сессию</a
+            >
+            <a class="btn btn-outline" href="#/tasks">План на день</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <p class="eyebrow green"><span></span>Что внутри</p>
+          <h2>Всё для спокойной и продуктивной учёбы</h2>
+          <div class="features-grid">
+            <article class="feature-card rise">
+              <span class="num">01</span>
+              <h3>Фокус-сессия</h3>
+              <p>
+                Задай время работы — и погрузись. Lo-fi видео, мягкие
+                уведомления о перерывах и звуки природы не дадут выгореть.
+              </p>
+              <a class="link-arrow" href="#/focus">Запустить таймер</a>
+            </article>
+            <article class="feature-card rise d1">
+              <span class="num">02</span>
+              <h3>План на день</h3>
+              <p>
+                Записывай задачи, отмечай выполненные и следи, как растёт твоя
+                продуктивность за неделю.
+              </p>
+              <a class="link-arrow" href="#/tasks">Составить план</a>
+            </article>
+            <article class="feature-card rise d2">
+              <span class="num">03</span>
+              <h3>Спокойный ритм</h3>
+              <p>
+                Мы верим: продуктивность начинается не с давления, а с заботы о
+                себе и понятного распорядка дня.
+              </p>
+              <a class="link-arrow" href="#/focus">Узнать больше</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="logo">
+              <img src="media/logophoto.png" alt="" onerror="this.remove()" />
+              <span class="logo-text">Inside&nbsp;Out</span>
+            </div>
+            <p class="footer-about">
+              Проект про тайм-менеджмент и ментальное здоровье школьников и
+              студентов. Учимся работать в своём темпе — без выгорания.
+            </p>
+          </div>
+          <div>
+            <h4>Разделы</h4>
+            <ul>
+              <li><a href="#/home">Главная</a></li>
+              <li><a href="#/focus">Тайм-менеджмент</a></li>
+              <li><a href="#/tasks">Задачи</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Контакты</h4>
+            <ul>
+              <li>hello@olen.study</li>
+              <li>Москва, Россия</li>
+              <li class="muted-li">Учебный проект · сделано с заботой</li>
+            </ul>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <span>© 2026 Inside Out. Все права защищены.</span>
+          <span>Дыши. Планируй. Успевай.</span>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ================= ФОКУС ================= -->
+    <main id="view-focus" class="view">
+      <!-- экран настройки -->
+      <section id="focus-setup" class="focus-setup">
+        <div class="glow"></div>
+        <div class="focus-setup-inner">
+          <p class="eyebrow light center">
+            <span></span>Тайм-менеджмент<span></span>
+          </p>
+          <h1 class="center">Настрой свой <em>ритм</em></h1>
+          <p class="center sub">
+            Введи время — и начинай. Во время сессии играет lo-fi видео, а сайт
+            мягко напомнит, когда пора отдохнуть.
+          </p>
+          <div class="time-grid">
+            <label class="time-card">
+              <span>Работа</span>
+              <div class="time-input">
+                <input
+                  type="number"
+                  id="work-min"
+                  min="1"
+                  max="180"
+                  value="25"
+                />
+                <small>мин</small>
+              </div>
+            </label>
+            <label class="time-card">
+              <span>Перерыв</span>
+              <div class="time-input">
+                <input
+                  type="number"
+                  id="break-min"
+                  min="1"
+                  max="60"
+                  value="5"
+                />
+                <small>мин</small>
+              </div>
+            </label>
+          </div>
+          <button class="btn btn-primary btn-big btn-pulse" id="focus-start">
+            Старт
+          </button>
+          <p class="hint">Классика: 25 минут работы и 5 минут отдыха</p>
+        </div>
+      </section>
+
+      <!-- экран сессии -->
+      <section id="focus-session" class="focus-session" hidden>
+        <div class="hero-media">
+          <video
+            src="media/lofi.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            onerror="this.remove()"
+          ></video>
+          <div class="session-shade"></div>
+        </div>
+
+        <div id="toast" class="toast" hidden>
+          <div class="toast-box">
+            <span class="toast-icon">&#128276;</span>
+            <p id="toast-text"></p>
+          </div>
+        </div>
+
+        <div class="session-body">
+          <p class="phase-label" id="phase-label">
+            <span class="dot"></span>Фокус — работаем
+          </p>
+          <div class="timer" id="timer">25:00</div>
+          <p class="timer-sub" id="timer-sub"></p>
+          <div class="session-actions">
+            <button class="btn btn-outline" id="focus-pause">Пауза</button>
+            <button class="btn btn-ghost" id="focus-stop">Завершить</button>
+          </div>
+        </div>
+
+        <div class="sounds">
+          <span class="sounds-title">Фон:</span>
+          <button
+            class="sound-btn"
+            data-sound="music"
+            data-src="media/music.mp3"
+          >
+            &#127925; Lo-fi музыка
+          </button>
+          <button class="sound-btn" data-sound="rain" data-src="media/rain.mp3">
+            &#127783; Дождь
+          </button>
+          <button
+            class="sound-btn"
+            data-sound="nature"
+            data-src="media/nature.mp3"
+          >
+            &#127807; Лес и птицы
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= ЗАДАЧИ ================= -->
+    <main id="view-tasks" class="view">
+      <div class="tasks-wrap container">
+        <p class="eyebrow green"><span></span>Задачи</p>
+        <h1>План на <em>день</em></h1>
+        <p class="sub">
+          Выбери день, запиши задачи и отмечай выполненные. Прогресс за неделю
+          покажет, как растёт твоя продуктивность.
+        </p>
+
+        <div class="week-strip" id="week-strip"></div>
+
+        <div class="day-card">
+          <div class="day-head">
+            <div>
+              <h2 id="day-title"></h2>
+              <p class="sub" id="day-summary"></p>
+            </div>
+            <input type="date" id="date-picker" />
+          </div>
+
+          <div class="day-progress" id="day-progress" hidden>
+            <div class="progress-track">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <span class="progress-pct" id="progress-pct"></span>
+          </div>
+
+          <ul class="task-list" id="task-list"></ul>
+
+          <form class="task-form" id="task-form">
+            <input
+              type="text"
+              id="task-input"
+              placeholder="Например, повторить билеты по матанализу"
+              maxlength="80"
+            />
+            <button type="submit" class="btn btn-primary" id="task-add">
+              Добавить
+            </button>
+          </form>
+        </div>
+
+        <div class="week-card">
+          <div class="week-head">
+            <div>
+              <h3>Прогресс за неделю</h3>
+              <p class="sub">Доля выполненных задач по дням</p>
+            </div>
+            <span class="week-avg" id="week-avg">0%</span>
+          </div>
+          <div class="week-chart" id="week-chart"></div>
+        </div>
+
+        <p class="footnote">Задачи хранятся в базе данных на сервере</p>
+      </div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
